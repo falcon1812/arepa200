@@ -1,0 +1,14 @@
+/**
+ * Hoja de estilos personalizados
+ * @autor Christian Falcon.
+ */
+/* Footer siempre al final del contenido. */
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}

@@ -1,0 +1,10 @@
+2015-07-07 20:04:42 ERROR  : ERROR:  current database cannot be renamed
+2015-07-07 20:04:48 ERROR  : ERROR:  current database cannot be renamed
+2015-07-25 19:03:11 ERROR  : Error connecting to the server: FATAL:  password authentication failed for user "postgres"
+
+2015-07-25 19:03:21 ERROR  : Error connecting to the server: FATAL:  password authentication failed for user "postgres"
+
+2015-07-25 19:03:25 ERROR  : Error connecting to the server: fe_sendauth: no password supplied
+
+2015-07-25 19:03:31 ERROR  : Error connecting to the server: FATAL:  password authentication failed for user "postgres"
+
