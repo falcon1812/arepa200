@@ -104,5 +104,52 @@ class HTML {
             return false;
         }
     }
+    
+    /**
+     * Funcion que crea una etiqueta html
+     * param $nameTag (nombre Etiqueta), $Atributos, $Path (para rutas dentro del proyecto)
+     * @autor Steffani Marquez.
+     */
+    public static function getTag($nameTag ,$Atributos = [], $Path = null){
+
+        if(!empty($Atributos) && !is_null($Atributos)){  
+			foreach ($Atributos as $key => $value) {
+				if($key == 'src'){
+					if (!empty($Path)){
+						$atributo .= $key.' = "'.$Path.'public/img/'.$value.'" ';
+					}
+				}
+				if($key == 'href'){
+					if (!empty($Path)){
+						$atributo .= $key.' = "'.$Path.$value.'" ';
+					}else if(is_null($Path)){
+						$atributo .= $key.' = "'.$value.'" ';
+					}
+				}
+				
+                $atributo .= $key.' = "'.$value.'" ';
+                $Tag = '<'.$nameTag.' '.$atributo.'>';
+            }
+        }else{
+            return false;
+        }
+
+        return $Tag;
+    }
+    
+     /**
+     * Funcion que cierra las etiquetas HTML
+     * @autor Steffani Marquez.
+     */
+    public static function getClose($nameTag = null){
+        if(!is_null($nameTag)){
+            $Tag = '</'.$nameTag.'>';
+        }else{
+            return false;
+        }
+
+        return $Tag;
+    } 
+    
 }
 ?>
